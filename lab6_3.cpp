@@ -2,7 +2,18 @@
 using namespace std;
 
 char before(char x){
-	//Write your function definition here
+	char before;
+	if(x == 'A'){
+		before = 'Z';
+	}
+	if(x > 'Z' || x <'A'){
+		before = '0';
+	}
+	if(x > 'A' && x <= 'Z'){
+		before = x-1;
+	}
+	return before;
+	
 }
 
 int main(){
@@ -17,3 +28,12 @@ int main(){
 	cout << before('c') << "\n";
 	return 0;
 }
+
+/*while(i < 58){
+
+    char x = 'A'+i;
+
+    cout << x;
+
+    i++;
+*/
